@@ -1,2 +1,15 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require 'rubygems'
+require 'rake'
+
+RSpec.configure do |config|
+  config.disable_monkey_patching!
+
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+end
+
 require 'paczkomat_reader'
