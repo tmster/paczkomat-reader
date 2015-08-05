@@ -20,6 +20,19 @@ Or install it yourself as:
 
     $ gem install paczkomat_reader
 
+## Setup
+
+This config should be put in config/initializers/paczkomat_reader.rb file.
+
+If you want to use Paczkomatreader with all the default settings, you don't need to create an initializer.
+
+```ruby
+PaczkomatReader.setup do |config|
+  config.cache_ttl = 120
+  config.api_path = 'https://fakeurl.com/v1'
+end
+```
+
 ## Usage
 
 TODO: Write usage instructions here
